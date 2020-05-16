@@ -10,6 +10,7 @@
     <contador/>
     <h2>Listado de planes de Cursos de Programación</h2>
     <div class="planes">
+      <!--
       <div class="plan">
         <div class="descripcion">
           <span class="titulo">Plan 1 - Principiante</span>
@@ -25,6 +26,11 @@
           <span class="titulo">Plan 3 - Avanzado</span>
         </div>
       </div>
+      -->
+      <plan nombre="Plan 1 - Principiantes"/>
+      <plan nombre="Plan 2 - Intermedio"/>
+      <plan nombre="Plan 3 - Avanzado"/>
+      <plan nombre="Plan 4 - Hackers"/>
     </div>
     </center>
   </div>
@@ -32,11 +38,13 @@
 
 <script>
 import Contador from './components/Contador.vue'
+import Plan from './components/Plan.vue'
 
 export default {
   name: 'App',
   components: {
-    Contador
+    Contador,
+    Plan
   }
 }
 </script>
