@@ -31,6 +31,7 @@
       <plan nombre="Plan 2 - Intermedio"/>
       <plan nombre="Plan 3 - Avanzado"/>
       <plan nombre="Plan 4 - Hackers"/>
+      <plan/>
     </div>
     </center>
   </div>

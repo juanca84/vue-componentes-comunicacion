@@ -11,7 +11,14 @@
 <script>
     export default {
         name: 'plan',
-        props: ['nombre']
+        props: {
+            nombre: {
+                type: String,
+                default: 'Plan 1 - Principiante',
+                required: true
+            },
+            precio: Number
+        }
     }
 </script>
 
