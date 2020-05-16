@@ -10,28 +10,7 @@
     <contador/>
     <h2>Listado de planes de Cursos de Programación</h2>
     <div class="planes">
-      <!--
-      <div class="plan">
-        <div class="descripcion">
-          <span class="titulo">Plan 1 - Principiante</span>
-        </div>
-      </div>
-      <div class="plan">
-        <div class="descripcion">
-          <span class="titulo">Plan 2 - Intermedio</span>
-        </div>
-      </div>
-      <div class="plan">
-        <div class="descripcion">
-          <span class="titulo">Plan 3 - Avanzado</span>
-        </div>
-      </div>
-      -->
-      <plan nombre="Plan 1 - Principiantes"/>
-      <plan nombre="Plan 2 - Intermedio"/>
-      <plan nombre="Plan 3 - Avanzado"/>
-      <plan nombre="Plan 4 - Hackers"/>
-      <plan/>
+      <plan v-for="pla in planes" :nombre="pla" :key="pla"/>
     </div>
     </center>
   </div>
@@ -43,6 +22,16 @@ import Plan from './components/Plan.vue'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      planes:[
+        "Plan 1 - Principiantes",
+        "Plan 2 - Intermedio",
+        "Plan 3 - Avanzado",
+        "Plan 4 - Hackers"
+      ]
+    }
+  },
   components: {
     Contador,
     Plan
