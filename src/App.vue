@@ -1,14 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <br/>
+    <contador/>
+    <contador/>
+    <contador/>
+    <contador/>
+    <contador/>
   </div>
 </template>
 
 <script>
+import Contador from './components/Contador.vue'
 
 export default {
   name: 'App',
   components: {
+    Contador
   }
 }
 </script>
