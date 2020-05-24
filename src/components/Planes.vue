@@ -1,6 +1,6 @@
 <template>
     <div>
-        <plan v-for="pla in planes" :nombre="pla" :key="pla"/>
+        <plan v-for="pla in planes" :nombre="pla" :key="pla" @select="planSeleccionado"/>
     </div>
 </template>
 <script>
@@ -9,16 +9,22 @@
         name: 'Planes',
         data(){
             return {
-            planes:[
-                "Plan 1 - Principiantes",
-                "Plan 2 - Intermedio",
-                "Plan 3 - Avanzado",
-                "Plan 4 - Hackers"
-            ]
+                planes:[
+                    "Plan 1 - Principiantes",
+                    "Plan 2 - Intermedio",
+                    "Plan 3 - Avanzado",
+                    "Plan 4 - Hackers"
+                ],
+                planSelect: null
             }
         },
         components: {
             Plan
+        },
+        methods: {
+            planSeleccionado(plan){
+                this.planSelect = plan;
+            }
         }
     }
 </script>

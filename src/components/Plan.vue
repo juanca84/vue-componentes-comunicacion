@@ -25,6 +25,7 @@
         },
         methods: {
           seleccionar(){
+            this.$emit('select', this.nombre);
             this.seleccionado = true;
           }
         }
