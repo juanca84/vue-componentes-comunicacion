@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="plan">
+      <div @click="seleccionar" class="plan" :class="{'plan-activo':seleccionado}">
         <div class="descripcion">
           <span class="titulo">{{ nombre }}</span>
         </div>
@@ -17,7 +17,16 @@
                 default: 'Plan 1 - Principiante',
                 required: true
             },
-            precio: Number
+        },
+        data () {
+          return {
+            seleccionado: false
+          }
+        },
+        methods: {
+          seleccionar(){
+            this.seleccionado = true;
+          }
         }
     }
 </script>
